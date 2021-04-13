@@ -13,6 +13,8 @@ category: other
 
 ```bash
 littleO@DESKTOP-HCE8CCS MINGW64 /d
+$ git config --global user.name "littleO-range"
+$ git config --global user.email "08183046@cumt.edu.cn"
 $ ssh-agent bash
 $ ssh-add ~/.ssh/991104 #存ssh密钥的文件，默认为id_rsa，这里我改为991104
 $ git clone git@github.com:littleO-range/littleO-range.github.io.git
