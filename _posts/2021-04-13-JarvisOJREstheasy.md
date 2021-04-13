@@ -39,5 +39,5 @@ for i in range(0,29):
 print(flag)
 ```
 
-
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image081.png" alt="image081" style="zoom:67%;" />
 
