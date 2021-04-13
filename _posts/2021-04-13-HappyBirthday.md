@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Happy Birthday to My First Blog!
-date: 2021-04-13 16:34:11 +0900
+date: 2021-04-13
 category: other
 ---
 # Happy Birthday to My First Blog!
