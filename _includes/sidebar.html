@@ -1,7 +1,8 @@
 <div class="sidebar-item sidebar-header">
 	<div class='sidebar-brand'>
-		<a href="/about/">{{ site.title }}</a>
+		<a href="/aboutme/">{{ site.title }}</a>
 	</div>
+	<p class="lead">{{ site.description }}</p>
 	<p class="lead">{{ site.description }}</p>
 	{%- if social.github -%}
 		<a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">
