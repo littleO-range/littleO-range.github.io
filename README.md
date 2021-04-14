@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: My-list-of-books
 permalink: /about/
 ---
 
