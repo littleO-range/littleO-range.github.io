@@ -15,6 +15,8 @@ category: web
 
 <img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_upload_ima/image103.png" alt="image103" style="zoom:67%;" />
 
+修改后如下图所示。
+
 <img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_upload_ima/image104.png" alt="image104" style="zoom:67%;" />
 
 改包后，把包发送出去，文件上传成功。
