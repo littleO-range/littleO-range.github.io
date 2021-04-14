@@ -38,3 +38,44 @@ category: summary
 **物理层**
 
 负责0、1比特流（0、1序列）与电压的高低、光的闪灭之间的互换。
+
+#### 2.传输方式分类
+
+（1）面向有连接型与面向无连接型。
+
+（2）电路交换与分组交换。
+
+（3）根据接收端数量分为单播、广播（广播域）、多播和任播（DNS根域名解析服务器）。
+
+#### 3.地址特点：
+
+（1）唯一性（MAC地址和IP地址都具有唯一性）
+
+（2）层次性（只有IP地址具有层次性）：IP地址实现分层的方式有两个方面，一方面IP地址由网络号和主机号两部分组成（网络号相同说明处于同一个网段），另一方面网络号相同的主机在组织结构、提供商类型和地域分布上都比较集中，方便IP寻址。
+
+（3）MAC寻址参考地址转发表（记录实际MAC地址本身），IP寻址参考路由控制表（记录集中网络号的IP地址）。
+
+#### 4.网络构成要素（硬件设备）
+
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/002.png" alt="002" style="zoom:100%;" />
+
+（1）网络接口卡（NIC）：也叫网络适配器、网卡、LAN卡。任何一台计算机连接网络时，必须要使用网卡。
+
+（2）中继器：位于OSI参考模型第一层。提供多个端口服务的中继器被称作中继集线器或集线器（多口中继器）。
+
+（3）网桥/2层交换机：位于OSI参考模型第二层。具有识别、临时存储数据帧的功能，网桥可以通过检查数据帧中的FCS数据位的值丢弃损坏数据，此外还能通过地址自学机制（MAC地址、硬件地址、物理地址、适配器地址）和过滤功能控制网络流量。交换集线器现在基本也属于网桥的一种。
+
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/003.png" alt="003" style="zoom:100%;" />
+
+（4）路由器/3层交换机：位于OSI参考模型的第三层。网桥是根据物理地址（MAC地址）进行处理，而路由器/3层交换机是根据IP地址进行处理。路由器有分担网络负荷的作用，有些路由器还具备一定的网络安全功能。
+
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/004.png" alt="004" style="zoom:100%;" />
+
+（5）4~7层交换机：负责处理OSI参考模型中从传输层至应用层的数据。负载均衡器就是4~7层交换机的一种。4~7层交换机的重要功能之一是带宽控制，此外还有广域网加速器、特殊应用访问加速以及防火墙等应用场景。
+
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/005.png" alt="005" style="zoom:100%;" />
+
+（6）网关：是OSI参考模型中负责将从传输层到应用层的数据进行转换和转发的设备，负责协议的转换与数据的转发。在同一种类型的协议之间转发数据叫做应用网关。代理服务器（Proxy Server）是网关的一种，即应用网关。防火墙是一款通过网关通信，针对不同应用提高安全性的产品。
+
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/006.png" alt="006" style="zoom:100%;" />
+
