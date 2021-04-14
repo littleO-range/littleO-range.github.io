@@ -1,7 +1,7 @@
 ---
 layout: page
-title: My-list-of-books
-permalink: /about/
+title: About-Me
+permalink: /AboutMe/
 ---
 
 ## Theme Monos
