@@ -1,53 +1,28 @@
 ---
 layout: post
-title: Jarvis OJ RE 爬楼梯
+title: Jarvis OJ RE Android Normal
 date: 2021-04-14
 category: RE
 ---
 
-# 爬楼梯
+# Android Normal
 
-Apk文件，先用模拟器打开查看，如图所示。
+用模拟器打开apk文件，还是一个输入key的题。
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image092.png" alt="image092" style="zoom: 50%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image119.png" alt="image119" style="zoom: 50%;" />
 
-每点击一下“爬一层楼”的按钮，“已爬的楼层”数量会增加一，“爬到了，看FLAG”的按钮无法点击。
+反编译看java源码。
 
-将apk文件改为rar文件，然后解压，将解压后文件夹内的classes.dex文件反汇编为java源码。
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image120.png" alt="image120" style="zoom: 67%;" />
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image093.png" alt="image093" style="zoom:67%;" />
+可以看到与正确的key有关的函数是stringFromJNI，再hello-libs中，所以我们查看so文件。
 
- 接下来查看源码中MainActivity部分。
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image121.png" alt="image121" style="zoom: 67%;" />
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image094.png" alt="image094" style="zoom:67%;" />
+选择Java_com_didictf_hellolibs_MainActivity_stringFromJNI，反编译后，发现有一个字符串像是flag，到这里其实在前面补上“DDCT”再拼接这个字符串，就是正确的flag（因为DDCTF系列基本都是相同的开头以及一个邮箱的形式）。
 
-分析源码可知，setClickable的参数决定了查看flag的按钮能否点击，当已爬楼层大于等于要爬楼层时，setClickable的参数为true，而小于时，为false，因此我们可以设法在小于情况下将其参数改为true，这样不用爬楼层就可以查看flag了。
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image122.png" alt="image122" style="zoom: 67%;" />
 
-接下来，利用apktoolbox反编译apk文件。 
+不过还是再继续找一下，这里估计flag也不用计算了，应该就在内存里，这里直接查看这个文件的二进制形式，找到flag，如图所示。
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image095.png" alt="image095" style="zoom: 50%;" />
-
-首先把反编译后的文件夹中的unknown文件夹删掉，否则之后回编译apk会出现问题。
-
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image096.png" alt="image096" style="zoom:67%;" />
-
-然后打开smali文件夹，找到MainActivity.smali文件，打开后，查找字符串setClickable。
-
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image097.png" alt="image097" style="zoom: 50%;" />
-
-共找到两处。
-
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image098.png" alt="image098" style="zoom:67%;" />
-
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image099.png" alt="image099" style="zoom:67%;" />
-
-对比找到的两个部分，不难推测出这里的v3和v5是传给setClickable的参数，因此我们需要修改代码第202行中v5的值与代码第111行中v3的0x1相同即可。
-搜索v5，其值为0x0，将其修改为0x1，如图所示。
-
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image100.png" alt="image100" style="zoom:67%;" />
-
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image101.png" alt="image101" style="zoom:67%;" />
-
-修改完成后，保存文件，然后将文件夹回编译apk，用模拟器运行后，点击“爬到了，看FLAG”即可得到flag。
-
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image102.png" alt="image102" style="zoom: 50%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_images/image123.png" alt="image123" style="zoom: 67%;" />
