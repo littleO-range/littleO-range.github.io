@@ -5,7 +5,7 @@ date: 2021-04-14
 category: summary
 ---
 
-## 一.基础知识
+## 一、网络基础知识
 
 #### 1.OSI参考模型中各个分层的作用（“协议”定义每一层的“作用”）
 
@@ -65,3 +65,46 @@ category: summary
 
 <img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/006.png" alt="006" style="zoom:100%;" />
 
+## 二、TCP/IP基础知识
+
+#### 1.TCP/IP协议群
+
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/007.png" alt="007" style="zoom:100%;" />
+
+#### 2.互联网与TCP/IP的关系
+
+互联网通信需要相应的网络协议，TCP/IP协议群为使用互联网而开发制定，即互联网的协议就是TCP/IP，TCP/IP就是互联网的协议。
+
+#### 3.互联网结构
+
+互联网每个网络由骨干网和末端网组成，每个网络之间通过NOC（网络操作中心）相连，异构网络（运营商不同导致网络连接方式和使用方法不同的网络）连接需要IX（网络交换中心）的支持。
+
+#### 4.TCP/IP分层模型
+
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/008.png" alt="008" style="zoom:100%;" />
+
+OSI参考模型注重“通信协议必要的功能是什么”，TCP/IP更强调“在计算机上实现协议应该开发哪种程序”。
+
+（1）硬件（物理层）：TCP/IP的最底层是负责数据传输的硬件。
+
+（2）网络接口层（数据链路层）：利用以太网中的数据链路层进行通信，因此数据接口层，也相当于让NIC起作用的“驱动程序（在操作系统与硬件之间起桥梁作用的软件）”。
+
+（3）互联网层（网络层）：互联网层使用IP协议，相当于PSI模型中的第三层网络层。IP协议基于IP地址将分组数据包发送到目的主机。IP、ICMP和ARP属于此层。
+
+（4）传输层：最主要的功能就是让应用程序之间实现通信。两个具有代表性的协议是TCP和UDP。TCP/IP分层中的互联网层与传输层的功能通常由操作系统提供，尤其是路由器必须实现通过互联网层转发分组数据包的功能。此外，连接互联网的所有主机跟路由器都必须实现IP功能。
+
+（5）应用层（会话层以上的分层）：
+
+## 三、数据链路
+
+## 四、IP协议
+
+## 五、IP协议相关技术
+
+## 六、TCP与UDP
+
+## 七、路由协议
+
+## 八、应用协议
+
+## 九、网络安全
