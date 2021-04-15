@@ -9,7 +9,7 @@ category: summary
 
 #### 1.OSI参考模型中各个分层的作用（“协议”定义每一层的“作用”）
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/001.png" alt="001" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/001.png" alt="001" style="zoom:80%;" />
 
 ■ 应用层：为应用程序提供服务并规定应用程序中通信相关的细节。包括文件传输、电子邮件、远程登录（虚拟终端）等协议。
 
@@ -43,33 +43,33 @@ category: summary
 
 #### 4.网络构成要素（硬件设备）
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/002.png" alt="002" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/002.png" alt="002" style="zoom:80%;" />
 
 （1）网络接口卡（NIC）：也叫网络适配器、网卡、LAN卡。任何一台计算机连接网络时，必须要使用网卡。
 
 （2）中继器：位于OSI参考模型第一层。提供多个端口服务的中继器被称作中继集线器或集线器（多口中继器）。
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/003.png" alt="003" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/003.png" alt="003" style="zoom:80%;" />
 
 （3）网桥/2层交换机：位于OSI参考模型第二层。具有识别、临时存储数据帧的功能，网桥可以通过检查数据帧中的FCS数据位的值丢弃损坏数据，此外还能通过地址自学机制（MAC地址、硬件地址、物理地址、适配器地址）和过滤功能控制网络流量。交换集线器现在基本也属于网桥的一种。
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/004.png" alt="004" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/004.png" alt="004" style="zoom:80%;" />
 
 （4）路由器/3层交换机：位于OSI参考模型的第三层。网桥是根据物理地址（MAC地址）进行处理，而路由器/3层交换机是根据IP地址进行处理。路由器有分担网络负荷的作用，有些路由器还具备一定的网络安全功能。
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/005.png" alt="005" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/005.png" alt="005" style="zoom:80%;" />
 
 （5）4~7层交换机：负责处理OSI参考模型中从传输层至应用层的数据。负载均衡器就是4~7层交换机的一种。4~7层交换机的重要功能之一是带宽控制，此外还有广域网加速器、特殊应用访问加速以及防火墙等应用场景。
 
 （6）网关：是OSI参考模型中负责将从传输层到应用层的数据进行转换和转发的设备，负责协议的转换与数据的转发。在同一种类型的协议之间转发数据叫做应用网关。代理服务器（Proxy Server）是网关的一种，即应用网关。防火墙是一款通过网关通信，针对不同应用提高安全性的产品。
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/006.png" alt="006" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/006.png" alt="006" style="zoom:80%;" />
 
 ## 二、TCP/IP基础知识
 
 #### 1.TCP/IP协议群
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/007.png" alt="007" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/007.png" alt="007" style="zoom:80%;" />
 
 #### 2.互联网与TCP/IP的关系
 
@@ -81,7 +81,7 @@ category: summary
 
 #### 4.TCP/IP分层模型
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/008.png" alt="008" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/008.png" alt="008" style="zoom:80%;" />
 
 OSI参考模型注重“通信协议必要的功能是什么”，TCP/IP更强调“在计算机上实现协议应该开发哪种程序”。
 
@@ -105,7 +105,7 @@ OSI参考模型注重“通信协议必要的功能是什么”，TCP/IP更强�
 
 网络的连接和构成的形态成为网络拓扑，包括总线型、环型、星型和网状型等，实际网络由简单的拓扑结构组合而成。
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/009.png" alt="009" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/009.png" alt="009" style="zoom:67%;" />
 
 #### 3.数据链路相关技术
 
@@ -113,7 +113,7 @@ OSI参考模型注重“通信协议必要的功能是什么”，TCP/IP更强�
 
 MAC地址用于识别数据链路中互连的节点，长48比特，结构如图所示。
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/010.png" alt="010" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/010.png" alt="010" style="zoom:50%;" />
 
 （2）共享介质型网络
 
@@ -129,7 +129,7 @@ MAC地址用于识别数据链路中互连的节点，长48比特，结构如图
 
 以太网交换机（交换集线器），是一种持有多个端口的网桥，它参考转发表，根据数据链路层中每个帧的目标MAC地址，决定从哪个网络接口发送数据。这种转发表是自动生成的，原理如图所示。
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/011.png" alt="011" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/011.png" alt="011" style="zoom:50%;" />
 
 交换机有存储转发和直通转发两种转发方式。存储转发检查以太网数据帧末尾的FCS位，避免错误帧。直通转发不接收整个帧，得知目标后即可开始转发，具有延迟较短的优势，但不可避免发送错误帧的可能性。
 
@@ -147,7 +147,7 @@ MAC地址用于识别数据链路中互连的节点，长48比特，结构如图
 
 如图所示，该交换机按照其端口区分了多个网段，从而区分了广播数据传播的范围、减少了网络负载并提高了网络的安全性。然而异构的两个网段之间，就需要利用具有路由功能的交换机（如三层交换机），或在各段中间通过路由器的连接才能实现通信。
 
-<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/012.png" alt="012" style="zoom:100%;" />
+<img src="https://github.com/littleO-range/littleO-range.github.io/raw/master/_summaryimage/012.png" alt="012" style="zoom:50%;" />
 
 #### 4.以太网
 
